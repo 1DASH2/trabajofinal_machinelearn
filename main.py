@@ -394,3 +394,13 @@ modelo.fit(X_train_escalado, y_train)
 
 print("\nModelo entrenado correctamente.")
 
+# ==========================================
+# REALIZAR PREDICCIONES
+# ==========================================
+
+predicciones = modelo.predict(X_test_escalado)
+
+print("\nPredicciones realizadas correctamente.")
+print("Primeras 10 predicciones:")
+print(predicciones[:10])
+
