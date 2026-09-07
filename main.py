@@ -380,3 +380,17 @@ X_test_escalado = escalador.transform(X_test)
 
 print("\nDatos preparados correctamente.")
 
+# ==========================================
+# CREAR Y ENTRENAR EL MODELO
+# ==========================================
+
+from sklearn.linear_model import LogisticRegression
+
+# Crear el modelo
+modelo = LogisticRegression(max_iter=1000)
+
+# Entrenar el modelo con los datos de entrenamiento
+modelo.fit(X_train_escalado, y_train)
+
+print("\nModelo entrenado correctamente.")
+
