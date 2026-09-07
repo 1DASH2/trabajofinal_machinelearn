@@ -404,3 +404,23 @@ print("\nPredicciones realizadas correctamente.")
 print("Primeras 10 predicciones:")
 print(predicciones[:10])
 
+# ==========================================
+# EVALUAR EL MODELO
+# ==========================================
+
+from sklearn.metrics import accuracy_score, classification_report
+
+# Calcular la precisión
+precision = accuracy_score(y_test, predicciones)
+
+print("\n==========================================")
+print("RESULTADOS DEL MODELO")
+print("==========================================")
+
+print(f"Precisión del modelo: {precision:.2%}")
+
+print("\nReporte de clasificación:")
+print(classification_report(y_test, predicciones))
+
+
+
