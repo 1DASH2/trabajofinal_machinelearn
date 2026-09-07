@@ -366,3 +366,17 @@ print(f"Precisión del modelo: {precision:.2%}")
 print("\nReporte de clasificación:")
 print(classification_report(y_test, predicciones))
 
+# ==========================================
+# PREPARAR LOS DATOS
+# ==========================================
+
+from sklearn.preprocessing import StandardScaler
+
+escalador = StandardScaler()
+
+X_train_escalado = escalador.fit_transform(X_train)
+
+X_test_escalado = escalador.transform(X_test)
+
+print("\nDatos preparados correctamente.")
+
